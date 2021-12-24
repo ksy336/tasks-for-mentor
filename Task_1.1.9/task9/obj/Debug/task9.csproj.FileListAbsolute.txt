@@ -1,0 +1,8 @@
+C:\Users\user\source\repos\task9\task9\bin\Debug\task9.exe.config
+C:\Users\user\source\repos\task9\task9\bin\Debug\task9.exe
+C:\Users\user\source\repos\task9\task9\bin\Debug\task9.pdb
+C:\Users\user\source\repos\task9\task9\obj\Debug\task9.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\task9\task9\obj\Debug\task9.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\task9\task9\obj\Debug\task9.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\task9\task9\obj\Debug\task9.exe
+C:\Users\user\source\repos\task9\task9\obj\Debug\task9.pdb
