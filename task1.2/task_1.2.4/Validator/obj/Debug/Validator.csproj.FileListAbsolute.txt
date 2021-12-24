@@ -1,0 +1,8 @@
+C:\Users\user\source\repos\Validator\Validator\bin\Debug\Validator.exe.config
+C:\Users\user\source\repos\Validator\Validator\bin\Debug\Validator.exe
+C:\Users\user\source\repos\Validator\Validator\bin\Debug\Validator.pdb
+C:\Users\user\source\repos\Validator\Validator\obj\Debug\Validator.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Validator\Validator\obj\Debug\Validator.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\Validator\Validator\obj\Debug\Validator.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Validator\Validator\obj\Debug\Validator.exe
+C:\Users\user\source\repos\Validator\Validator\obj\Debug\Validator.pdb

@@ -1,0 +1,8 @@
+C:\Users\user\source\repos\doubles\doubles\bin\Debug\doubles.exe.config
+C:\Users\user\source\repos\doubles\doubles\bin\Debug\doubles.exe
+C:\Users\user\source\repos\doubles\doubles\bin\Debug\doubles.pdb
+C:\Users\user\source\repos\doubles\doubles\obj\Debug\doubles.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\doubles\doubles\obj\Debug\doubles.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\doubles\doubles\obj\Debug\doubles.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\doubles\doubles\obj\Debug\doubles.exe
+C:\Users\user\source\repos\doubles\doubles\obj\Debug\doubles.pdb
