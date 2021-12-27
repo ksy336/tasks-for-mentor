@@ -15,18 +15,18 @@ namespace Validator
             str = Console.ReadLine();
             string newString = "";
             var array = str.ToCharArray();
-            newString += Char.ToUpper(array[0]).ToString();
-            newString += array[1].ToString();
+            newString.Append(Char.ToUpper(array[0]));
+            newString.Append(array[1]);
             
 
             for(int i = 2; i < array.Length; i++)
             {
                 if (IsRightSymbol(array[i - 2]) && Char.IsLetter(array[i]))
                 {
-                    newString += Char.ToUpper(array[i]).ToString();
+                    newString.Append(Char.ToUpper(array[i]));
                 } else
                 {
-                    newString += array[i].ToString();
+                    newString.Append(array[i]);
                 }
             }
             Console.WriteLine(newString);

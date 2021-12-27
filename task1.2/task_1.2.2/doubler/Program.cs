@@ -16,17 +16,17 @@ namespace doubler
             Console.WriteLine("Введите текст 2: ");
             string input2;
             input2 = Console.ReadLine();
-            string output = "";
+            string output = string.Empty;
 
             foreach(char ch in input1)
             {
                 if(!input2.Contains(ch))
                 {
-                    output += ch;
+                    output.Append(ch);
                 } else
                 {
-                    output += ch;
-                    output += ch;
+                    output.Append(ch);
+                    output.Append(ch);
                 }
             }
             Console.WriteLine($"Результат: {output}");
