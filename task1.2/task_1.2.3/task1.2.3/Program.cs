@@ -23,8 +23,7 @@ namespace LowerCase
                 {
                   
                     list.Add(element);
-                    string[] onlyLowerwords = list.ToArray();
-                    amountOfWords = onlyLowerwords.Length;
+                    amountOfWords = list.Count;
                 }
             }
             Console.WriteLine($"Количество слов, начинающихся с маленькой буквы: {amountOfWords}");
