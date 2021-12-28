@@ -13,7 +13,7 @@ namespace Validator
             Console.WriteLine("Введите текст: ");
             string str;
             str = Console.ReadLine();
-            string newString = "";
+            StringBuilder newString = new StringBuilder();
             var array = str.ToCharArray();
             newString.Append(Char.ToUpper(array[0]));
             newString.Append(array[1]);

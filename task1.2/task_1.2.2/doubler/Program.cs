@@ -16,9 +16,9 @@ namespace doubler
             Console.WriteLine("Введите текст 2: ");
             string input2;
             input2 = Console.ReadLine();
-            string output = string.Empty;
+            StringBuilder output = new StringBuilder();
 
-            foreach(char ch in input1)
+            foreach (char ch in input1)
             {
                 if(!input2.Contains(ch))
                 {
