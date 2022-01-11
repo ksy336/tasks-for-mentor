@@ -6,17 +6,33 @@ using System.Threading.Tasks;
 
 namespace Custom_Paint
 {
-     public class Circle
+    class Program
     {
-        private double x;
-        private double y;
+        static void Main(string[] args)
+        {
+            while(true)
+            {
+                var startPoint = new Point(0, 0);
+                var endPoint = new Point(3, 4);
+                var line = new Line(startPoint, endPoint);
+                Console.WriteLine(line.Length);
+            }
+           
+
+        }
+    }
+
+     class Circle
+    {
+        private double centerX;
+        private double centerY;
         private double radius;
         private const double pi = Math.PI;
 
         public double Radius { get ; set; }
 
-        public double X { get => x; set => x = value; }
-        public double Y { get => y; set => y = value; }
+        public double X { get => centerX; set => centerX = value; }
+        public double Y { get => centerY; set => centerY = value; }
         public Circle(double x, double y, double r)
         {
             X = x;
@@ -37,7 +53,7 @@ namespace Custom_Paint
 
     }
 
-    public class Ring
+     class Ring
     {
         private double centerX;
         private double centerY;
@@ -70,7 +86,7 @@ namespace Custom_Paint
 
     }
 
-    public class Point
+     class Point
     {
         private double x;
         private double y;
@@ -95,7 +111,7 @@ namespace Custom_Paint
         }
     }
 
-    public class Line
+     class Line
     {
         private double length;
         public Point Start {get => Start; set => Start = value;}
@@ -122,6 +138,65 @@ namespace Custom_Paint
 
     }
 
+     class Triangle
+    {
+        private double AB;
+        private double BC;
+        private double AC;
+        private double A;
+        private double B;
+        private double C;
 
+        public double GetPerimetr()
+        {
+            return AB + AC + BC;
+        }
+        public double GetSquare()
+        {
+            double p = (AB + AC + BC) / 2;
+            return Math.Sqrt(p * (p - AB) * (p - AC) * (p - BC));
+        }
+    }
+
+     class Square
+    {
+        public double Left { get => Left; set => Left = value; }
+
+        public Square(double a)
+        {
+            Left = a;
+        }
+
+        public double GetPerimetr()
+        {
+            return Left * 4;
+        }
+        public double GetArea()
+        {
+            return Left * Left;
+        }
+    }
+
+     class Rectangle
+    {
+        public double Left { get => Left; set => Left = value; }
+        public double Top { get => Top; set => Top = value; }
+
+        public Rectangle(double left, double top)
+        {
+            Left = left;
+            Top = top;
+        }
+
+        public double GetPerimetr()
+        {
+            return 2 * Left + 2 * Top;
+        }
+
+        public double GetArea()
+        {
+            return Left * Top;
+        }
+    }
 
 }
