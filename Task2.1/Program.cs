@@ -9,7 +9,7 @@ namespace Task2._1
    
         public class StringAsCharArray
         {
-            private char[] _myString;
+            public char[] _myString;
 
             public StringAsCharArray(char[] myString)
             {
