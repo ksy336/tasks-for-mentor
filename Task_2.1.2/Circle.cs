@@ -2,13 +2,7 @@
 using System.Drawing;
 using System.Text;
 
-namespace Figures
-{
-    using System;
-    using System.Drawing;
-    using System.Text;
-
-    namespace Figures
+    namespace Custom_Paint
     {
         public class Circle : Figure
         {

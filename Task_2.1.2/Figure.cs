@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Figures
+namespace Custom_Paint
 {
     public abstract class Figure
     {

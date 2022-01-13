@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using System.Text;
 
-namespace Figures
+namespace Custom_Paint
 {
     public class Point
     {
