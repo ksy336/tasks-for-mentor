@@ -6,7 +6,7 @@ namespace Custom_Paint
 {
     class Square : Figure
     {
-        public double Left { get => Left; set => Left = value; }
+        public double Left { get => left; set => left = value; }
 
         public Square(double a)
         {
@@ -20,6 +20,11 @@ namespace Custom_Paint
         public override double GetArea()
         {
             return Left * Left;
+        }
+
+        public override string ToString()
+        {
+            return $"Square: (Side1:{Left}; Side2{Left}; Side3{Left}; Side4{Left};)";
         }
     }
 }

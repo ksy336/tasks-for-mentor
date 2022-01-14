@@ -6,8 +6,7 @@ namespace Custom_Paint
 {
     public class Ring : Figure
     {
-        private double x;
-        private double y;
+       
         private double internalRadius;
         private double externalRadius;
         private const double pi = Math.PI;
@@ -15,6 +14,7 @@ namespace Custom_Paint
         public double Radius2 { get => externalRadius; set => externalRadius = value; }
         public double X { get => x; set => x = value; }
         public double Y { get => y; set => y = value; }
+
         public Ring(double x, double y, double externalRadius, double internalRadius) :
            {
             this.x = x;
@@ -32,6 +32,11 @@ namespace Custom_Paint
         {
             double length = (2 * pi * externalRadius) + (2 * pi * internalRadius);
             return length;
+        }
+
+        public override string ToString()
+        {
+            return $"Ring: (Internal radius: {internalRadius}; External radius:{externalRadius})";
         }
 
     }

@@ -15,8 +15,8 @@ namespace Custom_Paint
         static void Main(string[] args)
         {
            CreationOfFigures creationOfFigures = new CreationOfFigures();
-            creationOfFigures.GetStarted();
-
+            creationOfFigures.GetAuthorised();
+            
         }
     }
 }

@@ -24,5 +24,10 @@ namespace Custom_Paint
         {
             return Width * Height;
         }
+
+        public override string ToString()
+        {
+            return $"(Rectangle: (Width:{Width}; Height:{Height})";
+        }
     }
 }

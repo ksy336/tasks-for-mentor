@@ -29,6 +29,11 @@ namespace Custom_Paint
             double p = (AB + AC + BC) / 2;
             return Math.Sqrt(p * (p - AB) * (p - AC) * (p - BC));
         }
+
+        public override string ToString()
+        {
+            return $"Triangle: (FirstSide: {AB}; SecondSide: {AC}; ThirdSide:{BC};)";
+        }
     }
 
 }

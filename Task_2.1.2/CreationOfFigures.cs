@@ -7,8 +7,10 @@ namespace Custom_Paint
 {
     public class CreationOfFigures
     {
-        int input;
-        string str;
+
+        private List<User> users = new List<User>();
+        private User user;
+
 
         public static Point Input(string name)
         {
@@ -22,18 +24,26 @@ namespace Custom_Paint
             return new Point(x, y);
         }
 
+        public void GetAuthorised()
+        {
+            Console.Clear();
+            Console.WriteLine("Введите имя: ");
+            string name = Console.Readline();
+            Console.Clear();
+            GetStarted();
+        }
+
         public void GetStarted()
         {
-            do
-            {
+            string input;
+           
                 Console.WriteLine("Выберите действие:");
                 Console.WriteLine("1. Добавить фигуру");
                 Console.WriteLine("2. Вывести фигуры");
                 Console.WriteLine("3. Очистить холст");
-                Console.WriteLine("4. Выход");
-                str = Console.ReadLine();
-            } while (!int.TryParse(str, out input));
-            Console.Clear();
+                Console.WriteLine("4. Сменить пользователя");
+                Console.WriteLine("5. Выход");
+                input = Console.ReadLine();
 
             switch (input)
             {
@@ -62,9 +72,9 @@ namespace Custom_Paint
                             point2 = Input("Вторая точка");
                             try
                             {
-                                Side side = new Side(point1, point2);
-                                user.Figures.Add(side);
-                                Console.WriteLine($"Линия создана: {side}");
+                                Line line = new Line(point1, point2);
+                                user.Figures.Add(line);
+                                Console.WriteLine($"Линия создана: {line}");
                                 Console.WriteLine();
                                 GetStarted();
                             }
@@ -177,8 +187,33 @@ namespace Custom_Paint
                     break;
             
             case 2:
+                    int i = 0;
+                    foreach (var item in user.Figures)
+                    {
+                        Console.WriteLine($"Id - {i} {item}");
+                        i++;
+                    }
+                    Console.WriteLine();
+                    GetStarted();
+                    break;
 
+             case 3:
+                    user.Figures.Clear();
+                    Console.WriteLine("Холст очищен.");
+                    Console.WriteLine();
+                    GetStarted();
+                    break;
 
+                case 4:
+                    GetAuthorised();
+                    break;
+
+                case 5:
+                    break;
+
+                default:
+                    throw new NotImplementedException();
+                    break;
             }
 
         }

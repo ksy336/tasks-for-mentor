@@ -29,5 +29,10 @@ namespace Custom_Paint
             get => length;
         }
 
+        public override string ToString()
+        {
+            return $"(Start: {Start}; End:{End})";
+        }
+
     }
 }
