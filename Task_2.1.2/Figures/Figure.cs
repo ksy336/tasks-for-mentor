@@ -11,8 +11,8 @@ namespace Custom_Paint
         {
             StringBuilder str = new StringBuilder();
             str.AppendLine(ToString());
-            str.AppendLine($"Периметр: {GetLength}");
-            str.AppendLine($"Площадь: {GetArea}");
+            str.AppendLine($"Length: {GetLength}");
+            str.AppendLine($"Area: {GetArea}");
             return str.ToString();
         }
     }
