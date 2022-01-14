@@ -62,5 +62,20 @@ namespace GameDev.Monsters
 
         public Point Point { get; protected set; }
 
+        public void Move(Vector v, Material m)
+        {
+            if(m.IsMovable(this))
+            {
+                Point +=  v;
+            }
+        }
+        #endregion
+
+        public void SetDamage(Player player)
+        {
+            player.GetDamage(DamageValue);
+        }
+
+
     }
 }
