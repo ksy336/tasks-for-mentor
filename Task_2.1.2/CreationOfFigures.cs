@@ -10,14 +10,14 @@ namespace Figures
     {
 
         private List<User> users = new List<User>();
-        private readonly User user;
+        private static User user;
 
 
         public static Point Input(string name)
         {
             double x;
             double y;
-            Console.Write($"{Environment.NewLine}{name} точка:" +
+            Console.Write($"{Environment.NewLine}{name} :" +
                 $"{Environment.NewLine}X: ");
             double.TryParse(Console.ReadLine(), out x);
             Console.Write("Y: ");
@@ -30,6 +30,13 @@ namespace Figures
             Console.Clear();
             Console.WriteLine("Введите имя: ");
             string name = Console.ReadLine();
+            if (users.Contains(name))
+                user = users.Find(x => x.Name == name);
+            else
+            {
+                user = name;
+                users.Add(user);
+            }
             Console.Clear();
             GetStarted();
         }
@@ -74,8 +81,10 @@ namespace Figures
                             try
                             {
                                 Line line = new Line(point1, point2);
-                                user.Figures.Add(line);
+                                user.AddFigure(line);
                                 Console.WriteLine($"Линия создана: {line}");
+                                Console.WriteLine(value: $"{line} Длина: {line.GetLength()}");
+                                Console.WriteLine($" Длина линии: {line.GetLength()}");
                                 Console.WriteLine();
                                 GetStarted();
                             }
@@ -92,8 +101,9 @@ namespace Figures
                             try
                             {
                                 Circle circle = new Circle(point1, internalRadius);
-                                user.Figures.Add(circle);
+                                user.AddFigure(circle);
                                 Console.WriteLine($"Круг создан: {circle}");
+                                Console.WriteLine($" Длина круга: {circle.GetLength()}; Площадь круга: {circle.GetArea()}");
                                 Console.WriteLine();
                                 GetStarted();
                             }
@@ -112,8 +122,9 @@ namespace Figures
                             try
                             {
                                 Ring ring = new Ring(point1, internalRadius, externalRadius);
-                                user.Figures.Add(ring);
+                                user.AddFigure(ring);
                                 Console.WriteLine($"Кольцо создано: {ring}");
+                                Console.WriteLine($" Длина кольца: {ring.GetLength()}; Площадь кольца: {ring.GetArea()}");
                                 Console.WriteLine();
                                 GetStarted();
                             }
@@ -131,8 +142,9 @@ namespace Figures
                             try
                             {
                                 Triangle triangle = new Triangle(point1, point2, point3);
-                                user.Figures.Add(triangle);
+                                user.AddFigure(triangle);
                                 Console.WriteLine($"Треугольник создан: {triangle}");
+                                Console.WriteLine($" Периметр треугольника: {triangle.GetLength()}; Площадь треугольника: {triangle.GetArea()}");
                                 Console.WriteLine();
                                 GetStarted();
                             }
@@ -151,8 +163,9 @@ namespace Figures
                             try
                             {
                                 Rectangle rectangle = new Rectangle(point1, point2, point3, point4);
-                                user.Figures.Add(rectangle);
+                                user.AddFigure(rectangle);
                                 Console.WriteLine($"Прямоугольник создан: {rectangle}");
+                                Console.WriteLine($" Периметр прямоугольника: {rectangle.GetLength()}; Площадь прямоугольника: {rectangle.GetArea()}");
                                 Console.WriteLine();
                                 GetStarted();
                             }
@@ -171,8 +184,9 @@ namespace Figures
                             try
                             {
                                 Square square = new Square(point1, point2, point3, point4);
-                                user.Figures.Add(square);
+                                user.AddFigure(square);
                                 Console.WriteLine($"Квадрат создан: {square}");
+                                Console.WriteLine($" Периметр квадрата: {square.GetLength()}; Площадь квадрата: {square.GetArea()}");
                                 Console.WriteLine();
                                 GetStarted();
                             }
@@ -189,7 +203,7 @@ namespace Figures
 
                 case "2":
                     int i = 0;
-                    foreach (var item in user.Figures)
+                    foreach (var item in user._figures)
                     {
                         Console.WriteLine($"Id - {i} {item}");
                         i++;
@@ -199,7 +213,7 @@ namespace Figures
                     break;
 
                 case "3":
-                    user.Figures.Clear();
+                    user._figures.Clear();
                     Console.WriteLine("Холст очищен.");
                     Console.WriteLine();
                     GetStarted();

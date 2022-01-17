@@ -99,10 +99,6 @@ namespace Figures
             return Math.Sqrt(Math.Pow((end.X - start.X), 2) + Math.Pow((end.Y - start.Y), 2));
         }
 
-        public double Length
-        {
-            get => length;
-        }
 
         public override string ToString()
         {
