@@ -114,15 +114,11 @@ namespace Figures
         private Point point3;
         private Point point4;
 
-        public double Width { get => Width; set => Width = value; }
-        public double Height { get => Height; set => Height = value; }
-
-        public Rectangle(double width, double height)
-        {
-            Width = width;
-            Height = height;
-        }
-
+        public double First { get; set; }
+        public double Second { get; set; }
+        public double Third { get; set; }
+        public double Fourth { get; set; }
+       
         public Rectangle(Point point1, Point point2, Point point3, Point point4)
         {
             this.point1 = point1;
@@ -133,17 +129,17 @@ namespace Figures
 
         public override double GetLength()
         {
-           return 2 * Width + 2 * Height;
+           return 2 * First + 2 * Second;
         }
 
         public override double GetArea()
         {
-            return Width* Height;
+            return First * Second;
         }
 
         public override string ToString()
         {
-            return $"(Rectangle: (Width:{Width}; Height:{Height})";
+            return $"(Rectangle: (Width:{First}; Height:{Second})";
         }
     }
 
@@ -233,12 +229,14 @@ namespace Figures
 
     class Triangle : Figure
     {
-        private double AB;
-        private double BC;
-        private double AC;
-        private double A;
-        private double B;
-        private double C;
+        public Line AB { get; set; }
+        public Line AC { get; set; }
+        public Line BC { get; set; }
+
+        public Point Point1 { get; set;}
+        public Point Point2 { get; set;}
+        public Point Point3 { get; set;}
+
         private Point point1;
         private Point point2;
         private Point point3;
@@ -252,24 +250,28 @@ namespace Figures
 */
         public Triangle(Point point1, Point point2, Point point3)
         {
-            this.point1 = point1;
-            this.point2 = point2;
-            this.point3 = point3;
+            Point1 = point1;
+            Point2 = point2;
+            Point3 = point3;
+
+            AB = new Line(Point1, Point2);
+            AC = new Line(Point2, Point3);
+            BC = new Line(Point3, Point1);
         }
 
         public override double GetLength()
         {
-            return AB + AC + BC;
+            return AB.GetLength() + AC.GetLength() + BC.GetLength();
         }
         public override double GetArea()
         {
-            double p = (AB + AC + BC) / 2;
-            return Math.Sqrt(p * (p - AB) * (p - AC) * (p - BC));
+            double p = (AB.GetLength() + AC.GetLength() + BC.GetLength()) / 2;
+            return Math.Sqrt(p * (p - AB.GetLength()) * (p - AC.GetLength()) * (p - BC.GetLength()));
         }
 
         public override string ToString()
         {
-            return $"Triangle: (FirstSide: {AB}; SecondSide: {AC}; ThirdSide:{BC};)";
+            return $"Triangle: (FirstSide: {Point1}; SecondSide: {Point2}; ThirdSide:{Point3};)";
         }
     }
 

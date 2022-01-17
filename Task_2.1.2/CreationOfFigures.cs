@@ -135,9 +135,9 @@ namespace Figures
                             break;
 
                         case "4":
-                            point1 = Input("Первая точка");
-                            point2 = Input("Вторая точка");
-                            point3 = Input("Третья точка");
+                            point1 = Input("Первая сторона");
+                            point2 = Input("Вторая сторона");
+                            point3 = Input("Третья сторона");
 
                             try
                             {
@@ -155,10 +155,10 @@ namespace Figures
                             break;
 
                         case "5":
-                            point1 = Input("Первая точка");
-                            point2 = Input("Вторая точка");
-                            point3 = Input("Третья точка");
-                            point4 = Input("Четвертая точка");
+                            point1 = Input("Первая сторона");
+                            point2 = Input("Вторая сторона");
+                            point3 = Input("Третья сторона");
+                            point4 = Input("Четвертая сторона");
 
                             try
                             {
