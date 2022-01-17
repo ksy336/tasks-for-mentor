@@ -22,54 +22,51 @@ namespace Figures
         private double x;
         private double y;
 
-        public double X { get => x; set => x = value; }
-        public double Y { get => y; set => y = value; }
-        public Point()
-        {
-            X = 0;
-            Y = 0;
-        }
+        public double X { get; set; }
+        public double Y { get; set; }
 
-        public Point(double a)
-        {
-            X = a;
-            Y = a;
-        }
         public Point(double x, double y)
         {
             X = x;
             Y = y;
         }
+        public override string ToString()
+        {
+            return $"({X}; {Y})";
+        }
     }
 
     public class Circle : Figure
     {
-        private double center;
-        private double radius;
-        private Point point1;
-        private double internalRadius;
+       
+        private double _radius;
+        
         private const double pi = Math.PI;
 
-        public double Radius { get ; }
+        public double Radius { get => _radius; set => _radius = value; }
 
         public Point Center { get; }
 
-        public Circle(Point center, double radius)
+        public Circle(Point point, double radius)
         {
-            Center = center;
+            Center = point;
 
             Radius = radius;
         }
 
-        public Circle(int x, int y, double radius) : this(new Point(x, y), radius) { }
+        public Circle(double x, double y, double radius)
+        {
+            Center = new Point(x, y);
+            Radius = radius;
+        }
 
         public override double GetLength()
         {
-           return 2 * pi * radius;
+           return 2 * pi * Radius;
         }
         public override double GetArea()
         {
-            return pi * (radius * radius);
+            return pi * (Radius * Radius);
         }
         public override string ToString()
         {
@@ -81,8 +78,8 @@ namespace Figures
     public class Line : Figure
     {
         private double length;
-        public Point Start { get => Start; set => Start = value; }
-        public Point End { get => End; set => End = value; }
+        public Point Start { get; set; }
+        public Point End { get; set; }
         public Line()
         {
         }
@@ -116,6 +113,11 @@ namespace Figures
 
     class Rectangle : Figure
     {
+        private Point point1;
+        private Point point2;
+        private Point point3;
+        private Point point4;
+
         public double Width { get => Width; set => Width = value; }
         public double Height { get => Height; set => Height = value; }
 
@@ -123,6 +125,14 @@ namespace Figures
         {
             Width = width;
             Height = height;
+        }
+
+        public Rectangle(Point point1, Point point2, Point point3, Point point4)
+        {
+            this.point1 = point1;
+            this.point2 = point2;
+            this.point3 = point3;
+            this.point4 = point4;
         }
 
         public override double GetLength()
@@ -152,6 +162,7 @@ namespace Figures
         public double Radius2 { get => externalRadius; set => externalRadius = value; }
         public double X { get => x; set => x = value; }
         public double Y { get => y; set => y = value; }
+        public Point Point1 { get; }
 
         public Ring(double x, double y, double externalRadius, double internalRadius)
            {
@@ -160,21 +171,29 @@ namespace Figures
             this.externalRadius = externalRadius;
             this.internalRadius = internalRadius;
         }
+
+        public Ring(Point point1, double internalRadius, double externalRadius)
+        {
+            Point1 = point1;
+            this.internalRadius = internalRadius;
+            this.externalRadius = externalRadius;
+        }
+
         public override double GetArea()
         {
-            double square = pi * ((externalRadius * externalRadius) - (internalRadius * internalRadius));
+            double square = pi * ((Radius2 * Radius2) - (Radius * Radius));
             return square;
         }
 
         public override double GetLength()
         {
-            double length = (2 * pi * externalRadius) + (2 * pi * internalRadius);
+            double length = (2 * pi * Radius2) + (2 * pi * Radius);
             return length;
         }
 
         public override string ToString()
         {
-            return $"Ring: (Internal radius: {internalRadius}; External radius:{externalRadius})";
+            return $"Ring: (Internal radius: {Radius}; External radius:{Radius2})";
         }
 
     }
@@ -183,10 +202,22 @@ namespace Figures
     {
         private double left;
         public double Left { get => left; set => left = value; }
+        public Point Point1 { get; }
+        public Point Point2 { get; }
+        public Point Point3 { get; }
+        public Point Point4 { get; }
 
         public Square(double a)
         {
             Left = a;
+        }
+
+        public Square(Point point1, Point point2, Point point3, Point point4)
+        {
+            Point1 = point1;
+            Point2 = point2;
+            Point3 = point3;
+            Point4 = point4;
         }
 
         public override double GetLength()
@@ -212,11 +243,22 @@ namespace Figures
         private double A;
         private double B;
         private double C;
-        public Triangle(double a, double b, double c)
+        private Point point1;
+        private Point point2;
+        private Point point3;
+
+      /*  public Triangle(double a, double b, double c)
         {
             A = a;
             B = b;
             C = c;
+        }
+*/
+        public Triangle(Point point1, Point point2, Point point3)
+        {
+            this.point1 = point1;
+            this.point2 = point2;
+            this.point3 = point3;
         }
 
         public override double GetLength()

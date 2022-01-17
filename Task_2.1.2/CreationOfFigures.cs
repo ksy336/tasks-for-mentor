@@ -106,9 +106,9 @@ namespace Figures
                         case "3":
                             point1 = Input("Первая точка");
                             Console.Write("Введите внутренний радиус: ");
-                            internalRadius = Console.ReadLine();
+                            double.TryParse(Console.ReadLine(), out internalRadius); ;
                             Console.Write("Введите внешний радиус: ");
-                            externalRadius = Console.ReadLine();
+                            double.TryParse(Console.ReadLine(), out externalRadius); ;
                             try
                             {
                                 Ring ring = new Ring(point1, internalRadius, externalRadius);
@@ -214,7 +214,6 @@ namespace Figures
 
                 default:
                     throw new NotImplementedException();
-                    break;
             }
 
         }
