@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("Custom_Paint")]
+[assembly: AssemblyTitle("Figures")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Custom_Paint")]
+[assembly: AssemblyProduct("Figures")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("ec6a9c25-3481-4f58-9c7d-3d2558c97599")]
+[assembly: Guid("7b6f3eee-dfab-4d22-a164-525e86f2bee0")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

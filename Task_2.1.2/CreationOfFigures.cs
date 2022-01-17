@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Custom_Paint
+namespace Figures
 {
     public class CreationOfFigures
     {
 
         private List<User> users = new List<User>();
-        private User user;
+        private readonly User user;
 
 
         public static Point Input(string name)
@@ -28,7 +29,7 @@ namespace Custom_Paint
         {
             Console.Clear();
             Console.WriteLine("Введите имя: ");
-            string name = Console.Readline();
+            string name = Console.ReadLine();
             Console.Clear();
             GetStarted();
         }
@@ -36,18 +37,18 @@ namespace Custom_Paint
         public void GetStarted()
         {
             string input;
-           
-                Console.WriteLine("Выберите действие:");
-                Console.WriteLine("1. Добавить фигуру");
-                Console.WriteLine("2. Вывести фигуры");
-                Console.WriteLine("3. Очистить холст");
-                Console.WriteLine("4. Сменить пользователя");
-                Console.WriteLine("5. Выход");
-                input = Console.ReadLine();
+
+            Console.WriteLine("Выберите действие:");
+            Console.WriteLine("1. Добавить фигуру");
+            Console.WriteLine("2. Вывести фигуры");
+            Console.WriteLine("3. Очистить холст");
+            Console.WriteLine("4. Сменить пользователя");
+            Console.WriteLine("5. Выход");
+            input = Console.ReadLine();
 
             switch (input)
             {
-             case 1:
+                case "1":
 
                     Console.WriteLine("Выбери фигуру для создания:");
                     Console.WriteLine("1. Создать линию:");
@@ -67,7 +68,7 @@ namespace Custom_Paint
 
                     switch (variant)
                     {
-                        case 1:
+                        case "1":
                             point1 = Input("Первая точка");
                             point2 = Input("Вторая точка");
                             try
@@ -84,10 +85,10 @@ namespace Custom_Paint
                             }
                             break;
 
-                        case 2:
+                        case "2":
                             point1 = Input("Первая точка");
                             Console.Write("Введите радиус: ");
-                            internalRadius = Console.ReadLine();
+                            double.TryParse(Console.ReadLine(), out internalRadius);
                             try
                             {
                                 Circle circle = new Circle(point1, internalRadius);
@@ -102,7 +103,7 @@ namespace Custom_Paint
                             }
                             break;
 
-                        case 3:
+                        case "3":
                             point1 = Input("Первая точка");
                             Console.Write("Введите внутренний радиус: ");
                             internalRadius = Console.ReadLine();
@@ -122,7 +123,7 @@ namespace Custom_Paint
                             }
                             break;
 
-                        case 4:
+                        case "4":
                             point1 = Input("Первая точка");
                             point2 = Input("Вторая точка");
                             point3 = Input("Третья точка");
@@ -141,7 +142,7 @@ namespace Custom_Paint
                             }
                             break;
 
-                        case 5:
+                        case "5":
                             point1 = Input("Первая точка");
                             point2 = Input("Вторая точка");
                             point3 = Input("Третья точка");
@@ -161,7 +162,7 @@ namespace Custom_Paint
                             }
                             break;
 
-                        case 6:
+                        case "6":
                             point1 = Input("Первая точка");
                             point2 = Input("Вторая точка");
                             point3 = Input("Третья точка");
@@ -185,8 +186,8 @@ namespace Custom_Paint
                             throw new NotImplementedException();
                     }
                     break;
-            
-            case 2:
+
+                case "2":
                     int i = 0;
                     foreach (var item in user.Figures)
                     {
@@ -197,18 +198,18 @@ namespace Custom_Paint
                     GetStarted();
                     break;
 
-             case 3:
+                case "3":
                     user.Figures.Clear();
                     Console.WriteLine("Холст очищен.");
                     Console.WriteLine();
                     GetStarted();
                     break;
 
-                case 4:
+                case "4":
                     GetAuthorised();
                     break;
 
-                case 5:
+                case "5":
                     break;
 
                 default:
@@ -219,7 +220,5 @@ namespace Custom_Paint
         }
 
     }
-
-
 
 }
