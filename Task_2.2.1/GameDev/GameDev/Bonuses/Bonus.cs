@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace GameDev.Bonuses
 {
-    internal class Bonus
+    public abstract  class Bonus 
     {
+        
+        public abstract void Healing();
+        public abstract void DamageBoost();
     }
 }
