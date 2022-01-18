@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameDev
 {
-    internal class GameController
+    public class GameController
     {
     }
 }

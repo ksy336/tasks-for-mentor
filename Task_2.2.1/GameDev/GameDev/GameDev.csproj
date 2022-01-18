@@ -54,6 +54,7 @@
     <Compile Include="Monsters\Monster.cs" />
     <Compile Include="Monsters\Ork.cs" />
     <Compile Include="Monsters\Zombie.cs" />
+    <Compile Include="MoveHandler.cs" />
     <Compile Include="Obstacles\Fire.cs" />
     <Compile Include="Obstacles\Obstacle.cs" />
     <Compile Include="Obstacles\Wall.cs" />

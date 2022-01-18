@@ -1,4 +1,5 @@
-﻿using GameDev.Monsters;
+﻿using GameDev.Bonuses;
+using GameDev.Monsters;
 using GameDev.Obstacles;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace GameDev
         private GameController gameController = new GameController();
         private List<Obstacle> obstacles = new List<Obstacle>(2);
         private List<Monster> monsters = new List<Monster>(2);
+        private List<Bonus> bonuses = new List<Bonus>(2);
 
         public int Height { get; private set; }
         public int Width { get; private set; }
@@ -30,7 +32,9 @@ namespace GameDev
 
         private void Player_Moving()
         {
-
+            Console.WriteLine($"Здоровье игрока: {player.Health}");
+            Console.WriteLine($"Сила игрока: {player.Strength}");
+            Console.WriteLine($"Игрок находится сейчас на позиции: {player.Point}");
         }
     }
 }

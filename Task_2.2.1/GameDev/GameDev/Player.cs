@@ -9,6 +9,7 @@ namespace GameDev
     public class Player: Interfaces.IBody, Interfaces.IMovable
     {
         public Point Point { get; private set; }
+        public event MoveHandler Moving;
 
         #region IBody
 
@@ -61,6 +62,7 @@ namespace GameDev
             if (m.IsMovable(this))
             {
                 Point += v;
+                Moving?.Invoke()
                
             }
             
