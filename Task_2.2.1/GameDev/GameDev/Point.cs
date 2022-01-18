@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace GameDev
 {
-    internal class Point
+    public class Point
     {
+        private double x;
+        private double y;
+
+        public double X { get; set; }
+        public double Y { get; set; }
+
+        public Point(double x, double y)
+        {
+            X = x;
+            Y = y;
+        }
+        public override string ToString()
+        {
+            return $"({X}; {Y})";
+        }
     }
+
 }
