@@ -10,6 +10,8 @@ namespace GameDev
     {
         static void Main(string[] args)
         {
+            Game game = new Game(20, 40);
+            game.MoveController(Console.ReadKey().Key);
         }
     }
 }

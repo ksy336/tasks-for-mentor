@@ -22,6 +22,6 @@ namespace GameDev.Monsters
         public override void Move(Position newCoordinates)
         {
             position = newCoordinates;
-        }
+        }j
     }
 }

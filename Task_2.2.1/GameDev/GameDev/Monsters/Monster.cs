@@ -11,6 +11,7 @@ namespace GameDev.Monsters
         protected int MonstersHealth = 20;
         protected int MonstersWeight = 20;
         protected int MonstersStrength = 20;
+
         public abstract int DamageValue { get; }
 
         #region IBody

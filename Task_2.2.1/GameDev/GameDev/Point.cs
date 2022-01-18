@@ -8,8 +8,6 @@ namespace GameDev
 {
     public class Point
     {
-        private double x;
-        private double y;
 
         public double X { get; set; }
         public double Y { get; set; }

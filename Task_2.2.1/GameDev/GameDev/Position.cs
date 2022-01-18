@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace GameDev
 {
-    public class GameField
+    public class Position
     {
-        public GameField(int width, int height)
-        {
-
-        }
+        public int X;
+        public int Y;
     }
 }

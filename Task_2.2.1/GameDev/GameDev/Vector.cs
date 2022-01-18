@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace GameDev
 {
-    internal class Vector
+    public class Vector
     {
+        public Vector() { }
+        public double X { get; private set; }
+        public double Y { get; private set; }
+        public Vector(double x, double y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public static Vector operator *(Vector v1, int i)
+        {
+            return new Vector { X = (v1.X * i), Y = (v1.Y * i) };
+        }
     }
 }

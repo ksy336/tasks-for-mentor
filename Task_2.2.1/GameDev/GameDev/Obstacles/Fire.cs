@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace GameDev.Obstacles
 {
-    internal class Fire
+    public class Fire: Obstacle
     {
+        public Fire(int[] size) : base(size)
+        {
+
+        }
     }
 }

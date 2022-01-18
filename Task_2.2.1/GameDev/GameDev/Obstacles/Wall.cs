@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace GameDev.Obstacles
 {
-    internal class Wall
+    public class Wall: Obstacle
     {
+        public Wall(int[] size) : base(size)
+        {
+        }
+
     }
 }

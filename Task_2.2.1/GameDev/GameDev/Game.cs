@@ -11,12 +11,12 @@ namespace GameDev
 {
     public class Game
     {
-        private GameField gameField;
         private Player player;
-        private GameController gameController = new GameController();
+        private GameController controller = new GameController();
         private List<Obstacle> obstacles = new List<Obstacle>(2);
         private List<Monster> monsters = new List<Monster>(2);
         private List<Bonus> bonuses = new List<Bonus>(2);
+        public Position position { get; protected set; }
 
         public int Height { get; private set; }
         public int Width { get; private set; }
@@ -26,15 +26,17 @@ namespace GameDev
             Height = height;
 
             player = new Player();
-            gameField = new GameField(width, height);
-            player.Moving += Player_Moving;
+        }
+        public void MoveController(ConsoleKey cli)
+        {
+            Vector vector = controller.DoStep(cli);
+
+            if (vector != null)
+            {
+               
+                player.Move();
+            }
         }
 
-        private void Player_Moving()
-        {
-            Console.WriteLine($"Здоровье игрока: {player.Health}");
-            Console.WriteLine($"Сила игрока: {player.Strength}");
-            Console.WriteLine($"Игрок находится сейчас на позиции: {player.Point}");
-        }
     }
 }

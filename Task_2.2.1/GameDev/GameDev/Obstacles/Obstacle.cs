@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace GameDev.Obstacles
 {
-    public class Obstacle
+    public abstract class Obstacle
     {
+        private int[] Size;
+
+        protected Obstacle(int[] size)
+        {
+            Size = size;
+        }
     }
 }

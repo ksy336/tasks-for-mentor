@@ -45,21 +45,19 @@
   <ItemGroup>
     <Compile Include="Bonuses\Bonus.cs" />
     <Compile Include="Bonuses\Cherry.cs" />
-    <Compile Include="Bonuses\Money.cs" />
+    <Compile Include="Bonuses\Apple.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameController.cs" />
-    <Compile Include="GameField.cs" />
     <Compile Include="Interfaces\IBody.cs" />
-    <Compile Include="Interfaces\IMovable.cs" />
     <Compile Include="Monsters\Monster.cs" />
     <Compile Include="Monsters\Ork.cs" />
     <Compile Include="Monsters\Zombie.cs" />
-    <Compile Include="MoveHandler.cs" />
     <Compile Include="Obstacles\Fire.cs" />
     <Compile Include="Obstacles\Obstacle.cs" />
     <Compile Include="Obstacles\Wall.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Point.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vector.cs" />

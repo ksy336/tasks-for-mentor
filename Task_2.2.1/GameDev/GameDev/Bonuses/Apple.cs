@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace GameDev.Bonuses
 {
-    public class Cherry: Bonus
+    public class Apple: Bonus
     {
         public override void DamageBoost()
         {
-
+            
         }
         public override void Healing()
+        {
+            
+        }
+
+        public void AddLife()
         {
 
         }

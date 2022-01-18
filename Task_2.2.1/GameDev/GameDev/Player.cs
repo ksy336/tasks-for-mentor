@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace GameDev
 {
-    public class Player: Interfaces.IBody
+    public class Player:  Interfaces.IBody
     {
-      
-        public event MoveHandler Moving;
-        public Position position { get; protected set; }
+        /*public Player(int width, int height) : base(width, height)
+        {
+        }*/
+
+        public Position position { get; set; }
 
         #region IBody
 
@@ -43,9 +45,9 @@ namespace GameDev
             }
         }
 
-        public void GetDamage(int i)
+        public void GetDamage(int DamageValue)
         {
-            Health -= i;
+            Health -= DamageValue;
             if(Health < 0)
             {
                 Health = 0;
@@ -54,6 +56,11 @@ namespace GameDev
             {
                 Health = 100;
             }
+        }
+
+        internal void Move()
+        {
+            throw new NotImplementedException();
         }
         #endregion
 
