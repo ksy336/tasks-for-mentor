@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameDev.Monsters
 {
-    public class Ork : Monster, Interfaces.IBody, Interfaces.IMovable
+    public class Ork : Monster, Interfaces.IBody
     {
         public Ork() 
         {
@@ -16,8 +16,15 @@ namespace GameDev.Monsters
 
         }
 
+
         public override int DamageValue => 15;
 
-            
+        public Position position { get; private set; }
+
+        public override void Move(Position newCoordinates) 
+        {
+            position = newCoordinates;
+        }
+       
     }
 }

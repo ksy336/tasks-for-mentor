@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameDev.Monsters
 {
-    public abstract class Monster: Interfaces.IBody, Interfaces.IMovable
+    public abstract class Monster: Interfaces.IBody
     {
         protected int MonstersHealth = 20;
         protected int MonstersWeight = 20;
@@ -58,19 +58,7 @@ namespace GameDev.Monsters
             }
         }
         #endregion
-
-        #region IMovable
-
-        public Point Point { get; protected set; }
-
-        public void Move(Vector v, Material m)
-        {
-            if(m.IsMovable(this))
-            {
-                Point +=  v;
-            }
-        }
-        #endregion
+        public abstract void Move(Position newCoordinates);
 
         public virtual void Attack(Player player)
         {

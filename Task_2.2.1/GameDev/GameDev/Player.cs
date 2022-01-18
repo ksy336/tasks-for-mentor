@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace GameDev
 {
-    public class Player: Interfaces.IBody, Interfaces.IMovable
+    public class Player: Interfaces.IBody
     {
-        public Point Point { get; private set; }
+      
         public event MoveHandler Moving;
+        public Position position { get; protected set; }
 
         #region IBody
 
@@ -56,18 +57,11 @@ namespace GameDev
         }
         #endregion
 
-        #region IMovable
-        public void Move(Vector v, Material m)
+        public void Move(Position newCoordinates)
         {
-            if (m.IsMovable(this))
-            {
-                Point += v;
-                Moving?.Invoke()
-               
-            }
-            
+            position = newCoordinates;
         }
-        #endregion
+       
 
     }
 }
