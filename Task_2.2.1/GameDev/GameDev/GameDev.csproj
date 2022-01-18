@@ -43,9 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\Desktop\tasks-for-mentor\Task_2.2.1\Program.cs">
-      <Link>Program.cs</Link>
-    </Compile>
     <Compile Include="Bonuses\Bonus.cs" />
     <Compile Include="Bonuses\Cherry.cs" />
     <Compile Include="Bonuses\Money.cs" />
@@ -62,6 +59,7 @@
     <Compile Include="Obstacles\Wall.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Point.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vector.cs" />
   </ItemGroup>

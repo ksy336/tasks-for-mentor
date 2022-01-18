@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameDev
+namespace GameDev.Obstacles
 {
-    internal class GameField
+    public class Obstacle
     {
     }
 }

@@ -11,6 +11,7 @@ namespace GameDev.Monsters
         protected int MonstersHealth = 20;
         protected int MonstersWeight = 20;
         protected int MonstersStrength = 20;
+        public abstract int DamageValue { get; }
 
         #region IBody
 
@@ -71,7 +72,7 @@ namespace GameDev.Monsters
         }
         #endregion
 
-        public void SetDamage(Player player)
+        public virtual void Attack(Player player)
         {
             player.GetDamage(DamageValue);
         }

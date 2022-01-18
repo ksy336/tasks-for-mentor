@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameDev.Obstacles
+namespace GameDev
 {
-    internal class Obstacle
+    public class GameField
     {
+        public GameField(int width, int height)
+        {
+
+        }
     }
 }
