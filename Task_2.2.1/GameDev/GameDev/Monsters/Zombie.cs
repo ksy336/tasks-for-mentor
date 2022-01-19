@@ -16,12 +16,12 @@ namespace GameDev.Monsters
         }
 
         public override int DamageValue => 12;
-
+        
         public Position position { get; private set; }
 
         public override void Move(Position newCoordinates)
         {
             position = newCoordinates;
-        }j
+        }
     }
 }

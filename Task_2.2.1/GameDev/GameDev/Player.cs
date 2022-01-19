@@ -8,9 +8,6 @@ namespace GameDev
 {
     public class Player:  Interfaces.IBody
     {
-        /*public Player(int width, int height) : base(width, height)
-        {
-        }*/
 
         public Position position { get; set; }
 
@@ -58,18 +55,22 @@ namespace GameDev
             }
         }
 
-        internal void Move()
-        {
-            throw new NotImplementedException();
-        }
+
         #endregion
 
-        public void Move(Position newCoordinates)
-        {
-            position = newCoordinates;
-        }
-       
+        public void Move(Vector vector, Position newCoordinates)
 
+        {
+            try
+            {
+                position = newCoordinates;
+            }
+            catch
+            {
+                throw new NotImplementedException();
+            }
+
+        }
     }
 }
 

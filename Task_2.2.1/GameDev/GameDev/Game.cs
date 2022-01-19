@@ -16,7 +16,7 @@ namespace GameDev
         private List<Obstacle> obstacles = new List<Obstacle>(2);
         private List<Monster> monsters = new List<Monster>(2);
         private List<Bonus> bonuses = new List<Bonus>(2);
-        public Position position { get; protected set; }
+        public Position position { get; set; }
 
         public int Height { get; private set; }
         public int Width { get; private set; }
@@ -33,8 +33,8 @@ namespace GameDev
 
             if (vector != null)
             {
-               
-                player.Move();
+
+                player.Move(vector, position);
             }
         }
 
