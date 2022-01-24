@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\tasks-for-mentor\Task_2.2.1\GameDev\GameDev\obj\Debug\GameDev.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\tasks-for-mentor\Task_2.2.1\GameDev\GameDev\obj\Debug\GameDev.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\tasks-for-mentor\Task_2.2.1\GameDev\GameDev\obj\Debug\GameDev.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\tasks-for-mentor\Task_2.2.1\GameDev\GameDev\bin\Debug\GameDev.exe.config
+C:\Users\user\Desktop\tasks-for-mentor\Task_2.2.1\GameDev\GameDev\bin\Debug\GameDev.exe
+C:\Users\user\Desktop\tasks-for-mentor\Task_2.2.1\GameDev\GameDev\bin\Debug\GameDev.pdb
+C:\Users\user\Desktop\tasks-for-mentor\Task_2.2.1\GameDev\GameDev\obj\Debug\GameDev.exe
+C:\Users\user\Desktop\tasks-for-mentor\Task_2.2.1\GameDev\GameDev\obj\Debug\GameDev.pdb
