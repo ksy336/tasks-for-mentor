@@ -9,8 +9,7 @@ namespace GameDev
     public class Vector
     {
         public Vector() { }
-        public double X { get; private set; }
-        public double Y { get; private set; }
+        public Point Coordinates { get; private set; }
         public Vector(double x, double y)
         {
             X = x;
