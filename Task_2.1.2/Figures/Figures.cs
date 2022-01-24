@@ -19,8 +19,6 @@ namespace Figures
 
     public class Point : Figure
     {
-        private double x;
-        private double y;
 
         public double X { get; set; }
         public double Y { get; set; }
@@ -90,11 +88,7 @@ namespace Figures
             
         }
 
-        public override double GetLength()
-        {
-            return SetLength(Start, End);
-        }
-        public static double SetLength(Point start, Point end)
+        public override double GetLength(Point start, Point end)
         {
             return Math.Sqrt(Math.Pow((end.X - start.X), 2) + Math.Pow((end.Y - start.Y), 2));
         }
@@ -241,13 +235,7 @@ namespace Figures
         private Point point2;
         private Point point3;
 
-      /*  public Triangle(double a, double b, double c)
-        {
-            A = a;
-            B = b;
-            C = c;
-        }
-*/
+
         public Triangle(Point point1, Point point2, Point point3)
         {
             Point1 = point1;

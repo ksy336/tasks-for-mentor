@@ -11,7 +11,7 @@ namespace Figures
         static void Main(string[] args)
         {
             CreationOfFigures creationOfFigures = new CreationOfFigures();
-            creationOfFigures.GetAuthorised();
+            creationOfFigures.Authorised();
 
         }
     }

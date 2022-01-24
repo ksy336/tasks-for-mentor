@@ -25,7 +25,7 @@ namespace Figures
             return new Point(x, y);
         }
 
-        public void GetAuthorised()
+        public void Authorised()
         {
             Console.Clear();
             Console.WriteLine("Введите имя: ");
@@ -78,8 +78,7 @@ namespace Figures
                         case "1":
                             point1 = Input("Первая точка");
                             point2 = Input("Вторая точка");
-                            try
-                            {
+                            
                                 Line line = new Line(point1, point2);
                                 user.AddFigure(line);
                                 Console.WriteLine($"Линия создана: {line}");
@@ -87,11 +86,6 @@ namespace Figures
                                 Console.WriteLine($" Длина линии: {line.GetLength()}");
                                 Console.WriteLine();
                                 GetStarted();
-                            }
-                            catch
-                            {
-                                throw new Exception();
-                            }
                             break;
 
                         case "2":
@@ -109,7 +103,7 @@ namespace Figures
                             }
                             catch
                             {
-                                throw new Exception();
+                                throw new Exception("Сбой в работе программы. Введите данные заново.");
                             }
                             break;
 

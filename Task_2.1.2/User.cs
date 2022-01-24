@@ -18,7 +18,7 @@ namespace Figures
            
         }
 
-        public static implicit operator User(string name)
+        public static GetUser(string name)
         {
             return new User(name) { Name = name, _figures = new List<Figure>() };
         } 
