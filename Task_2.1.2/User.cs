@@ -27,7 +27,7 @@ namespace Figures
             _figures.Add(figure);
         }
 
-        public override string ToString() => $"{Name}";
+        public override string ToString() => Name;
 
     }
 }
