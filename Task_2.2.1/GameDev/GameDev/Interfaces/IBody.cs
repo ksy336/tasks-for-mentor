@@ -8,12 +8,10 @@ namespace GameDev.Interfaces
 {
     public interface IBody
     {
-        int Health { get; }
-        int Strength { get; }
+        int Health { get; set; }
+        int Strength { get; set; }
         int Weight { get; }
 
-        void SetHealth(int i);
-        void SetStrength(int i);
         void GetDamage(int i);
     }
 }
