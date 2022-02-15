@@ -32,7 +32,8 @@ namespace TextDictionary
                     Console.WriteLine($"Данное слово {element.Key} встречается {element.Value} раз.");
 
                 }
-                if (textDictionary.Where(el => el.Value > 3).Count() < textDictionary.Count() * 0.2)
+                if (textDictionary.Count(el => el.Value > 3) < textDictionary.Count * 0.2)
+
                 {
                 Console.WriteLine("Все хорошо. Текст можно не испралять.");
                 }
