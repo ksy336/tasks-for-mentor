@@ -1,0 +1,8 @@
+C:\Users\user\source\repos\TextDictionary\TextDictionary\bin\Debug\TextDictionary.exe.config
+C:\Users\user\source\repos\TextDictionary\TextDictionary\bin\Debug\TextDictionary.exe
+C:\Users\user\source\repos\TextDictionary\TextDictionary\bin\Debug\TextDictionary.pdb
+C:\Users\user\source\repos\TextDictionary\TextDictionary\obj\Debug\TextDictionary.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\TextDictionary\TextDictionary\obj\Debug\TextDictionary.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\TextDictionary\TextDictionary\obj\Debug\TextDictionary.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\TextDictionary\TextDictionary\obj\Debug\TextDictionary.exe
+C:\Users\user\source\repos\TextDictionary\TextDictionary\obj\Debug\TextDictionary.pdb
