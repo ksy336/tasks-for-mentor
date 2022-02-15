@@ -27,11 +27,11 @@ namespace ConsoleApp1
         {
             char[] usefulstring = usefulString.ToCharArray();
 
-            if (usefulString.All(c => (c >= 'а' && c <= 'я') || (c >= 'А' && c <= 'Я')))
+            if (usefulString.All(c => (c >= 'а' && c <= 'я' && c == 'ё') || (c >= 'А' && c <= 'Я' && c == 'Ё')))
             {
                 return DifferentLanguagues.Russian;
 
-            } else if (usefulString.All(c => (c >= 'a' && c <= 'z' && c >= 'ё') || (c >= 'A' && c <= 'Z' && c <= 'Ё'))) {
+            } else if (usefulString.All(c => (c >= 'a' && c <= 'z' ) || (c >= 'A' && c <= 'Z'))) {
                 return DifferentLanguagues.English;
 
             } else if (usefulString.All(c => char.IsDigit(c))) {
