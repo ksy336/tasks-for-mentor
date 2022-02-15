@@ -16,14 +16,15 @@ namespace TextDictionary
                 string[] result = text.Split(chars, StringSplitOptions.RemoveEmptyEntries);
                 Dictionary<string, int> textDictionary = new Dictionary<string, int>();
                 textDictionary.FirstOrDefault(res => res.Key == result[0]);
-                for (int obj = 0; obj < result.Length; obj++)
+                foreach (var item in result)
                 {
-                    if (textDictionary.ContainsKey(result[obj]))
+                    if (textDictionary.ContainsKey(item))
                     {
-                        textDictionary[result[obj]]++;
-                    } else
+                        textDictionary[item]++;
+                    }
+                    else
                     {
-                        textDictionary.Add(result[obj], 1);
+                        textDictionary.Add(item, 1);
                     }
                 }
                 foreach (var element in textDictionary)
