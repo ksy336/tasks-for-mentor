@@ -31,7 +31,7 @@ namespace ConsoleApp1
             {
                 return DifferentLanguagues.Russian;
 
-            } else if (usefulString.All(c => (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) {
+            } else if (usefulString.All(c => (c >= 'a' && c <= 'z' && c >= 'ё') || (c >= 'A' && c <= 'Z' && c <= 'Ё'))) {
                 return DifferentLanguagues.English;
 
             } else if (usefulString.All(c => char.IsDigit(c))) {
