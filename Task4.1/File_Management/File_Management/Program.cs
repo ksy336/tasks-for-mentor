@@ -65,7 +65,7 @@ namespace File_Management
                 copyCase = int.TryParse(str, out int i);
                 if (i >= 0 || i <= copies.Length)
                 {
-                    fileManager.DoCopy(copies[i]);
+                    fileManager.Copy(copies[i]);
                 } 
                 else
                 {
@@ -78,12 +78,40 @@ namespace File_Management
     }
     class FileManager
     {
+        string copyFolder = @"C:\Program Files(x86)\Folder/copy";
+        string source = @"C:\Program Files(x86)\Folder";
+
 
         // метод получения изменений в файлах
         public void Start()
         {
-            string folder = new FileSystemWatcher();
+             var folder = new FileSystemWatcher(source);
+
+            folder.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.LastAccess | NotifyFilters.FileName;
+            folder.Changed += OnDoCopy;
+            folder.Created += OnDoCopy;
+            folder.Deleted += OnDoCopy;
+            folder.Renamed += OnDoCopy;
+
+            folder.Filter = "*.txt";
+            folder.IncludeSubdirectories = true;
+            folder.EnableRaisingEvents = true;
         }
-        
+
+        private void OnDoCopy(object sender, FileSystemEventArgs e)
+        {
+            var name = DateTime.Now.ToString("dd-MM-yyyy");
+            FileSystem.CopyDirectory(source, copyFolder + "\\" + name);
+        }
+
+        public void Copy(string path)
+        {
+            FileSystem.CopyDirectory(path, source);
+        }
+        public string[] GetCopy()
+        {
+            return Directory.GetDirectories(copyFolder);
+        }
+
     }
 }
