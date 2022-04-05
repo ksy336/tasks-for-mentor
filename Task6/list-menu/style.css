@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+.list-wrapper {
+    margin: 0 auto;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list {
+    width: 200px;
+    background: cornsilk;
+    padding-left: 10px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 10px 10px 2px brown;
+    border: solid 1px black;
+}
+.item {
+    list-style-type: none;
+    font-size: 1.8rem;
+    color: brown;
+    margin-top: 10px;
+}
